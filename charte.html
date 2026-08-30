@@ -1,0 +1,240 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ALGÉRIE 2036 — Charte graphique v1.0</title>
+<style>
+@font-face{font-family:"Plex";font-weight:400;font-style:normal;font-display:swap;src:url("polices/IBMPlexSans-400.ttf") format("truetype")}
+@font-face{font-family:"PlexAr";font-weight:400;font-style:normal;font-display:swap;src:url("polices/IBMPlexSansArabic-400.ttf") format("truetype")}
+@font-face{font-family:"Plex";font-weight:500;font-style:normal;font-display:swap;src:url("polices/IBMPlexSans-500.ttf") format("truetype")}
+@font-face{font-family:"PlexAr";font-weight:500;font-style:normal;font-display:swap;src:url("polices/IBMPlexSansArabic-500.ttf") format("truetype")}
+@font-face{font-family:"Plex";font-weight:600;font-style:normal;font-display:swap;src:url("polices/IBMPlexSans-600.ttf") format("truetype")}
+@font-face{font-family:"PlexAr";font-weight:600;font-style:normal;font-display:swap;src:url("polices/IBMPlexSansArabic-600.ttf") format("truetype")}
+@font-face{font-family:"Plex";font-weight:700;font-style:normal;font-display:swap;src:url("polices/IBMPlexSans-700.ttf") format("truetype")}
+@font-face{font-family:"PlexAr";font-weight:700;font-style:normal;font-display:swap;src:url("polices/IBMPlexSansArabic-700.ttf") format("truetype")}
+@font-face{font-family:"PlexMono";font-weight:400;font-style:normal;font-display:swap;src:url("polices/IBMPlexMono-400.ttf") format("truetype")}
+@font-face{font-family:"PlexMono";font-weight:600;font-style:normal;font-display:swap;src:url("polices/IBMPlexMono-600.ttf") format("truetype")}
+
+:root{--vert:#006233;--vif:#0F8C4C;--profond:#04331F;--encre:#0B1F17;--ardoise:#5B6B64;
+--trait:#D8E2DC;--papier:#F7FAF8;--pale:#E6F4EC}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papier);color:var(--encre);
+font:400 16px/1.6 "Plex",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.mono,code{font-family:"PlexMono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.env{max-width:1080px;margin:0 auto;padding:0 28px}
+header{background:var(--profond);color:#fff;padding:56px 0 48px}
+header .env{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;flex-wrap:wrap}
+header img{height:92px}
+header .meta{font-size:13px;line-height:1.7;opacity:.82;text-align:right}
+h1{font:600 13px/1.3 "Plex";letter-spacing:.14em;text-transform:uppercase;margin:0 0 6px;opacity:.7}
+section{padding:52px 0;border-bottom:1px solid var(--trait)}
+section:last-of-type{border:0}
+h2{font:600 30px/1.2 "Plex";margin:0 0 6px;letter-spacing:-.01em}
+h2 .num{color:var(--vert);font-family:"PlexMono";font-size:20px;margin-right:14px}
+.chapo{color:var(--ardoise);max-width:64ch;margin:0 0 30px}
+h3{font:600 19px/1.3 "Plex";margin:34px 0 12px}
+p{max-width:70ch}
+.grille{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.g4{grid-template-columns:repeat(auto-fill,minmax(178px,1fr))}
+.carte{background:#fff;border:1px solid var(--trait);border-radius:10px;padding:18px}
+.logo-case{background:#fff;border:1px solid var(--trait);border-radius:10px;
+padding:22px;text-align:center}
+.logo-case.sombre{background:var(--profond);border-color:var(--profond)}
+.logo-case img{max-width:100%;width:auto;height:auto}
+.logo-case .lab{margin-top:16px;font-size:12px;color:var(--ardoise);
+letter-spacing:.04em}
+.logo-case.sombre .lab{color:#9FBDAF}
+.cc{display:flex;gap:14px;align-items:flex-start;background:#fff;
+border:1px solid var(--trait);border-radius:10px;padding:14px}
+.cc-p{width:64px;height:64px;border-radius:8px;flex:none}
+.cc-t{font-size:13px;line-height:1.5;display:flex;flex-direction:column;gap:2px}
+.cc-t b{font-weight:600;font-size:15px}
+.cc-t code{font-size:12px;color:var(--ardoise)}
+.cc-t .mono{font-size:11px;color:var(--ardoise)}
+.cc-t .use{color:var(--ardoise);margin-top:4px}
+.ratio{font-family:"PlexMono";font-size:11px;margin-top:4px}
+.ratio.ok{color:#0F6B3C}.ratio.moyen{color:#8A5A00}.ratio.non{color:#8C2020}
+table{border-collapse:collapse;width:100%;font-size:14px;background:#fff}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--trait);
+vertical-align:top}
+th{font:600 12px/1.3 "Plex";letter-spacing:.08em;text-transform:uppercase;
+color:var(--ardoise);background:var(--pale)}
+td.n{font-family:"PlexMono";font-variant-numeric:tabular-nums;white-space:nowrap}
+.couche{display:flex;align-items:center;gap:10px;font-size:14px;padding:9px 0;
+border-bottom:1px solid var(--trait)}
+.couche:last-child{border:0}
+.pip{width:22px;height:22px;border-radius:5px;flex:none}
+.couche .h{margin-left:auto;font-family:"PlexMono";font-size:11px;color:var(--ardoise)}
+.statut{border:1px solid var(--trait);border-radius:10px;overflow:hidden;background:#fff}
+.statut .demo{height:96px}
+.statut .txt{padding:15px}
+.statut .txt b{display:block;font-size:15px}
+.statut .txt span{font-size:13px;color:var(--ardoise);display:block;margin-top:5px}
+.statut .txt .regle{font-family:"PlexMono";font-size:11px;color:var(--encre);
+margin-top:9px;display:block}
+.badge{display:inline-flex;align-items:center;gap:7px;border-radius:999px;
+padding:5px 12px;font-size:12px;font-weight:600;letter-spacing:.04em}
+.score{display:flex;align-items:center;gap:12px;background:#fff;
+border:1px solid var(--trait);border-radius:10px;padding:14px}
+.score .val{font-family:"PlexMono";font-weight:600;font-size:26px;color:#fff;
+width:64px;height:64px;border-radius:12px;display:flex;align-items:center;
+justify-content:center;flex:none}
+.spec{background:#fff;border:1px solid var(--trait);border-radius:10px;
+padding:18px 20px;margin-bottom:12px}
+.spec .ex{display:block;color:var(--encre)}
+.spec .det{font-family:"PlexMono";font-size:11px;color:var(--ardoise);margin-top:8px}
+.ar{font-family:"PlexAr","Plex",sans-serif;direction:rtl;text-align:right}
+.interdit{display:flex;gap:11px;font-size:14px;align-items:flex-start}
+.interdit .x{color:#B32020;font-weight:600;flex:none}
+.avert{background:#FFF6E8;border:1px solid #E8C98A;border-left:4px solid #B36B00;
+border-radius:8px;padding:16px 18px;font-size:14px;max-width:74ch}
+.avert b{display:block;margin-bottom:5px}
+.zp{background:#fff;border:1px solid var(--trait);border-radius:10px;padding:26px;
+display:flex;gap:34px;align-items:center;flex-wrap:wrap}
+footer{padding:40px 0 64px;color:var(--ardoise);font-size:13px}
+ul{max-width:70ch}li{margin:5px 0}
+
+</style></head><body>
+<header><div class="env"><div><img src="logo/algerie2036-principal-blanc.svg" alt="Algérie 2036"></div><div class="meta">Charte graphique<br>Version 1.0 — 30 août 2026<br>JNCORP INC.</div></div></header>
+<div class="env">
+<section><h2><span class="num">01</span>La marque</h2>
+<p class="chapo">Trois frondes montent d’un socle commun et se rejoignent en pointe. C’est l’abstraction du monument d’Alger que vous m’avez envoyé — pas son dessin. Les trois branches se lisent aussi comme trois pales, ce qui rattache le signe au volet énergies renouvelables de la plateforme, et le fût central comme une colonne qui s’élève : la donnée qui monte du territoire.</p>
+<div class="avert"><b>Une précaution, et elle est sérieuse.</b>Le monument dont vient la silhouette est un mémorial national. Le signe livré est une abstraction géométrique, redessinée au trait — aucune photographie, aucun décalque. Il ne doit jamais être accolé au drapeau, au sceau ou aux armoiries de l’État, et la plateforme ne doit jamais se présenter comme un site officiel. Si un jour Algérie 2036 se rapproche d’une institution publique, l’usage du signe devra être validé par elle avant toute diffusion.</div>
+<h3>Les déclinaisons</h3>
+<div class="grille g3">
+<div class="logo-case "><div style="height:64px;display:flex;align-items:center;justify-content:center"><img src="logo/algerie2036-principal.svg" alt="Principal — horizontal" style="max-height:64px"></div><div class="lab">Principal — horizontal</div></div>
+<div class="logo-case sombre"><div style="height:64px;display:flex;align-items:center;justify-content:center"><img src="logo/algerie2036-principal-blanc.svg" alt="Principal — sur fond sombre" style="max-height:64px"></div><div class="lab">Principal — sur fond sombre</div></div>
+<div class="logo-case "><div style="height:96px;display:flex;align-items:center;justify-content:center"><img src="logo/algerie2036-vertical.svg" alt="Vertical" style="max-height:96px"></div><div class="lab">Vertical</div></div>
+<div class="logo-case "><div style="height:64px;display:flex;align-items:center;justify-content:center"><img src="logo/algerie2036-arabe.svg" alt="Arabe — الجزائر 2036" style="max-height:64px"></div><div class="lab">Arabe — الجزائر 2036</div></div>
+<div class="logo-case "><div style="height:84px;display:flex;align-items:center;justify-content:center"><img src="logo/algerie2036-marque.svg" alt="Signe seul" style="max-height:84px"></div><div class="lab">Signe seul</div></div>
+<div class="logo-case "><div style="height:84px;display:flex;align-items:center;justify-content:center"><img src="logo/algerie2036-marque-noire.svg" alt="Monochrome encre" style="max-height:84px"></div><div class="lab">Monochrome encre</div></div>
+<div class="logo-case sombre"><div style="height:84px;display:flex;align-items:center;justify-content:center"><img src="logo/algerie2036-marque-blanche.svg" alt="Monochrome blanc" style="max-height:84px"></div><div class="lab">Monochrome blanc</div></div>
+<div class="logo-case "><div style="height:84px;display:flex;align-items:center;justify-content:center"><img src="logo/algerie2036-pastille.svg" alt="Pastille — favicon, application" style="max-height:84px"></div><div class="lab">Pastille — favicon, application</div></div>
+</div>
+<p style="font-size:13px;color:var(--ardoise);margin-top:14px">Tous les fichiers sont en SVG, texte compris : le nom est converti en tracés, donc le logo s’affiche à l’identique sur une machine où la police n’est pas installée. Le signe seul pèse <span class="mono">404</span> octets.</p>
+<h3>Zone de protection et tailles minimales</h3>
+<div class="zp"><div style="position:relative;padding:26px;background:var(--pale);border-radius:8px"><img src="logo/algerie2036-marque.svg" style="height:104px;display:block"></div><div style="font-size:14px;max-width:46ch"><p style="margin:0 0 10px"><b>Zone de protection :</b> un quart de la hauteur du signe, sur les quatre côtés. Rien n’entre dedans — ni texte, ni filet, ni bord de page.</p><p style="margin:0"><b>Tailles minimales :</b> signe seul <span class="mono">24</span> px à l’écran et <span class="mono">8</span> mm à l’impression ; verrou horizontal <span class="mono">140</span> px ; en dessous, on passe à la pastille, qui reste lisible à <span class="mono">16</span> px.</p></div></div>
+<h3>Ce qu’on ne fait pas</h3><div class="grille g2">
+<div class="carte interdit"><span class="x">✕</span><span><b>Ne pas déformer</b><br><span style="color:var(--ardoise)">Le rapport hauteur / largeur est fixe.</span></span></div>
+<div class="carte interdit"><span class="x">✕</span><span><b>Ne pas recolorer</b><br><span style="color:var(--ardoise)">Vert Algérie, blanc, ou encre. Rien d’autre.</span></span></div>
+<div class="carte interdit"><span class="x">✕</span><span><b>Ne pas ajouter d’ombre</b><br><span style="color:var(--ardoise)">Ni contour, ni relief, ni dégradé.</span></span></div>
+<div class="carte interdit"><span class="x">✕</span><span><b>Ne pas poser sur une photo chargée</b><br><span style="color:var(--ardoise)">Sur image : la pastille pleine, ou un aplat vert derrière.</span></span></div>
+<div class="carte interdit"><span class="x">✕</span><span><b>Ne pas accoler l’emblème de l’État</b><br><span style="color:var(--ardoise)">Ni drapeau, ni sceau, ni armoiries : la plateforme n’est pas un organisme public.</span></span></div>
+<div class="carte interdit"><span class="x">✕</span><span><b>Ne pas réécrire le nom</b><br><span style="color:var(--ardoise)">« ALGÉRIE 2036 ». Pas « Algerie 2036 », pas « Algeria 2036 » dans les versions française et arabe.</span></span></div>
+</div></section>
+<section><h2><span class="num">02</span>Les couleurs</h2>
+<p class="chapo">Vert et blanc, comme demandé. Le vert porte la marque, le blanc porte la donnée : sur une carte à quinze couches, c’est le blanc qui rend l’information lisible. Chaque rapport de contraste ci-dessous est <b>calculé</b> à partir des couleurs elles-mêmes (formule WCAG 2.1), il n’est pas estimé.</p>
+<h3>Primaires</h3><div class="grille g2">
+<div class="cc"><div class="cc-p" style="background:#006233"></div><div class="cc-t"><b>Vert Algérie</b><code>#006233</code><span class="mono">R 0 · V 98 · B 51</span><span class="use">La couleur de la marque. Logo, en-têtes, boutons principaux, éléments actifs.</span><span class="ratio ok">7.51:1 sur blanc — AAA</span></div></div>
+<div class="cc"><div class="cc-p" style="background:#FFFFFF" style="box-shadow:inset 0 0 0 1px #D8E2DC"></div><div class="cc-t"><b>Blanc</b><code>#FFFFFF</code><span class="mono">R 255 · V 255 · B 255</span><span class="use">La respiration. Fond de toutes les pages de contenu et des cartes.</span><span class="ratio non">1.00:1 sur blanc — décoratif</span></div></div>
+<div class="cc"><div class="cc-p" style="background:#0F8C4C"></div><div class="cc-t"><b>Vert 2036</b><code>#0F8C4C</code><span class="mono">R 15 · V 140 · B 76</span><span class="use">L’accent vivant : liens, sélection sur la carte, états de survol, la fronde centrale du logo.</span><span class="ratio moyen">4.31:1 sur blanc — AA gros texte</span></div></div>
+<div class="cc"><div class="cc-p" style="background:#04331F"></div><div class="cc-t"><b>Vert profond</b><code>#04331F</code><span class="mono">R 4 · V 51 · B 31</span><span class="use">Bandeaux sombres, pied de page, fonds de carte en mode nuit.</span><span class="ratio ok">14.01:1 sur blanc — AAA</span></div></div>
+</div>
+<h3>Neutres</h3><div class="grille g2">
+<div class="cc"><div class="cc-p" style="background:#0B1F17"></div><div class="cc-t"><b>Encre</b><code>#0B1F17</code><span class="mono">R 11 · V 31 · B 23</span><span class="use">Texte courant.</span><span class="ratio ok">17.18:1 sur blanc — AAA</span></div></div>
+<div class="cc"><div class="cc-p" style="background:#5B6B64"></div><div class="cc-t"><b>Ardoise</b><code>#5B6B64</code><span class="mono">R 91 · V 107 · B 100</span><span class="use">Texte secondaire, légendes, unités.</span><span class="ratio ok">5.63:1 sur blanc — AA</span></div></div>
+<div class="cc"><div class="cc-p" style="background:#D8E2DC"></div><div class="cc-t"><b>Trait</b><code>#D8E2DC</code><span class="mono">R 216 · V 226 · B 220</span><span class="use">Filets, bordures de tableaux, séparateurs.</span><span class="ratio non">1.33:1 sur blanc — décoratif</span></div></div>
+<div class="cc"><div class="cc-p" style="background:#F7FAF8" style="box-shadow:inset 0 0 0 1px #D8E2DC"></div><div class="cc-t"><b>Papier</b><code>#F7FAF8</code><span class="mono">R 247 · V 250 · B 248</span><span class="use">Fond d’application, fond de carte clair.</span><span class="ratio non">1.05:1 sur blanc — décoratif</span></div></div>
+<div class="cc"><div class="cc-p" style="background:#E6F4EC" style="box-shadow:inset 0 0 0 1px #D8E2DC"></div><div class="cc-t"><b>Vert pâle</b><code>#E6F4EC</code><span class="mono">R 230 · V 244 · B 236</span><span class="use">Fonds de section, ligne de tableau survolée, halo de sélection.</span><span class="ratio non">1.13:1 sur blanc — décoratif</span></div></div>
+</div>
+<h3>Les couches de la carte</h3>
+<p>Une règle tient tout le système : <b>le vert de marque n’est jamais une couche</b>. Le vert appartient à l’interface — boutons, sélection, en-têtes. Si le vert servait aussi à représenter une donnée, on ne saurait plus, en regardant la carte, ce qui est le logiciel et ce qui est le territoire.</p>
+<div class="grille g2">
+<div class="carte"><h3 style="margin:0 0 8px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ardoise)">Infrastructures</h3>
+<div class="couche"><span class="pip" style="background:#0B5FA5"></span><span>Ports & maritime</span><span class="h">#0B5FA5 · 6.6:1 · blanc</span></div>
+<div class="couche"><span class="pip" style="background:#4A5A66"></span><span>Rail & routes</span><span class="h">#4A5A66 · 7.1:1 · blanc</span></div>
+<div class="couche"><span class="pip" style="background:#00757E"></span><span>Numérique, fibre & data centers</span><span class="h">#00757E · 5.5:1 · blanc</span></div>
+<div class="couche"><span class="pip" style="background:#1A7E9C"></span><span>Eau, barrages & dessalement</span><span class="h">#1A7E9C · 4.7:1 · blanc</span></div>
+</div>
+<div class="carte"><h3 style="margin:0 0 8px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ardoise)">Énergie</h3>
+<div class="couche"><span class="pip" style="background:#A36200"></span><span>Solaire</span><span class="h">#A36200 · 4.9:1 · blanc</span></div>
+<div class="couche"><span class="pip" style="background:#2E9BD6"></span><span>Éolien</span><span class="h">#2E9BD6 · 3.1:1 · encre</span></div>
+<div class="couche"><span class="pip" style="background:#6B34C7"></span><span>Hydrogène vert</span><span class="h">#6B34C7 · 7.1:1 · blanc</span></div>
+<div class="couche"><span class="pip" style="background:#8C6B3F"></span><span>Énergie conventionnelle</span><span class="h">#8C6B3F · 4.9:1 · blanc</span></div>
+</div>
+<div class="carte"><h3 style="margin:0 0 8px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ardoise)">Économie</h3>
+<div class="couche"><span class="pip" style="background:#A8176F"></span><span>Zones franches</span><span class="h">#A8176F · 7.0:1 · blanc</span></div>
+<div class="couche"><span class="pip" style="background:#A8471C"></span><span>Industrie & corridors</span><span class="h">#A8471C · 5.9:1 · blanc</span></div>
+<div class="couche"><span class="pip" style="background:#5B44B0"></span><span>Capital humain & universités</span><span class="h">#5B44B0 · 7.2:1 · blanc</span></div>
+</div>
+<div class="carte"><h3 style="margin:0 0 8px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ardoise)">Territoire & environnement</h3>
+<div class="couche"><span class="pip" style="background:#3E7C2A"></span><span>Forêt & Barrage vert</span><span class="h">#3E7C2A · 5.1:1 · blanc</span></div>
+<div class="couche"><span class="pip" style="background:#647D18"></span><span>Agriculture</span><span class="h">#647D18 · 4.7:1 · blanc</span></div>
+<div class="couche"><span class="pip" style="background:#6E6259"></span><span>Urbanisme & villes</span><span class="h">#6E6259 · 5.9:1 · blanc</span></div>
+<div class="couche"><span class="pip" style="background:#B32020"></span><span>Risques & contraintes</span><span class="h">#B32020 · 6.7:1 · blanc</span></div>
+</div>
+</div>
+<p style="font-size:13px;color:var(--ardoise)">Le rapport indiqué est celui de la couleur sur fond blanc, et le mot qui suit dit dans quelle couleur s’écrit le texte <b>posé sur la pastille de légende</b> : blanc au-dessus de 4,5:1, encre en dessous. Sur la carte elle-même, la règle ne change jamais : <b>les libellés sont en Encre avec un halo blanc de 2 px</b>, jamais en blanc sur une couleur de couche — c’est la seule façon qu’un nom de wilaya reste lisible quand quatre couches se superposent.</p>
+<div class="avert" style="margin-top:22px"><b>Impression</b>Les valeurs données sont des valeurs écran (RVB / hexadécimal), mesurées. Je ne donne pas d’équivalent CMJN ni de référence Pantone : une conversion dépend du papier et du profil de l’imprimeur, et un chiffre inventé ici deviendrait un vert faux sur la première brochure. Votre imprimeur cale les équivalents sur ces valeurs et vous renvoie un BAT — à ce moment-là je les ajoute à la charte.</div>
+</section>
+<section><h2><span class="num">03</span>La typographie</h2>
+<p class="chapo">Une seule famille pour les trois langues : <b>IBM Plex</b>. Sa version arabe est dessinée par les mêmes auteurs et au même rythme que la latine — l’arabe n’est donc pas une police de remplacement posée à côté, c’est la même voix. Licence libre (OFL), donc hébergeable sur vos serveurs : aucune requête vers un service extérieur à chaque page.</p>
+<div class="grille g3" style="margin-bottom:26px">
+<div class="carte"><div style="font:600 26px "Plex"">Wilaya · Port · Corridor</div><div style="font-size:12px;color:var(--ardoise);margin-top:12px">IBM Plex Sans</div></div>
+<div class="carte"><div style="font:600 26px "PlexAr";direction:rtl">الجزائر · ميناء · ولاية</div><div style="font-size:12px;color:var(--ardoise);margin-top:12px">IBM Plex Sans Arabic</div></div>
+<div class="carte"><div style="font:400 22px "PlexMono"">58 wilayas · 87/100</div><div style="font-size:12px;color:var(--ardoise);margin-top:12px">IBM Plex Mono</div></div>
+</div>
+<h3>L’échelle</h3><table><thead><tr><th>Rôle</th><th>Taille</th><th>Interligne</th><th>Graisse</th><th>Famille</th><th>Emploi</th></tr></thead><tbody>
+<tr><td><b>Affichage</b></td><td class="n">44 px</td><td class="n">1.1</td><td class="n">600</td><td>Plex Sans</td><td>Titre de page d’accueil.</td></tr>
+<tr><td><b>Titre 1</b></td><td class="n">32 px</td><td class="n">1.2</td><td class="n">600</td><td>Plex Sans</td><td>Titre de section.</td></tr>
+<tr><td><b>Titre 2</b></td><td class="n">24 px</td><td class="n">1.25</td><td class="n">600</td><td>Plex Sans</td><td>Sous-section, nom de wilaya.</td></tr>
+<tr><td><b>Titre 3</b></td><td class="n">19 px</td><td class="n">1.3</td><td class="n">600</td><td>Plex Sans</td><td>Bloc de fiche.</td></tr>
+<tr><td><b>Corps</b></td><td class="n">16 px</td><td class="n">1.6</td><td class="n">400</td><td>Plex Sans</td><td>Texte courant. Jamais en dessous.</td></tr>
+<tr><td><b>Corps réduit</b></td><td class="n">14 px</td><td class="n">1.55</td><td class="n">400</td><td>Plex Sans</td><td>Notes, aides de saisie.</td></tr>
+<tr><td><b>Étiquette</b></td><td class="n">12 px</td><td class="n">1.35</td><td class="n">500</td><td>Plex Sans</td><td>Majuscules, interlettrage +0,06 em. Légendes de carte.</td></tr>
+<tr><td><b>Chiffre</b></td><td class="n">16 px</td><td class="n">1.3</td><td class="n">400</td><td>Plex Mono</td><td>Scores, surfaces, distances, coordonnées. Chiffres à chasse fixe.</td></tr>
+</tbody></table>
+<h3>Trois règles</h3><ul><li><b>Tout chiffre destiné à être comparé passe en Plex Mono</b>, chiffres à chasse fixe. Une colonne de surfaces ou de scores doit s’aligner à la virgule : sinon l’œil compare des longueurs, pas des valeurs.</li><li><b>Le corps ne descend jamais sous 16 px</b> dans les pages, ni sous 12 px dans les légendes de carte.</li><li><b>En arabe, la page entière passe en <code>dir="rtl"</code></b>, y compris la carte : légende, panneau de couches et fiche territoire basculent à droite. On utilise les propriétés logiques du CSS (<code>margin-inline-start</code>, <code>padding-inline</code>) pour qu’une seule feuille de style serve les trois langues.</li></ul>
+<div class="carte ar" style="margin-top:16px"><div style="font:600 21px 'PlexAr'">الجزائر 2036 — منصة الاستشراف الوطني</div><div style="font-size:14px;color:var(--ardoise);margin-top:6px">ولاية · ميناء · مركز بيانات · منطقة حرة · طاقات متجددة</div></div>
+</section>
+<section><h2><span class="num">04</span>Le statut de la donnée</h2>
+<p class="chapo">C’est la partie de la charte qui protège le projet. Votre cahier des charges pose la règle : <b>FACTS ≠ TARGETS ≠ PROJECTIONS</b>. Une charte graphique doit la rendre visible, sinon elle reste une intention. Trois états, et ils ne se distinguent <b>jamais par la couleur seule</b> : forme, motif et mot écrit. Un lecteur daltonien, une impression en noir et blanc, une capture d’écran reprise ailleurs — dans les trois cas la différence doit survivre.</p>
+<div class="grille g3">
+<div class="statut"><div class="demo" style="background:#0B5FA5"></div><div class="txt"><b>Fait</b><span>Donnée constatée. Elle porte obligatoirement sa source et sa date.</span><span class="regle">aplat plein · bordure pleine · ● Fait</span></div></div>
+<div class="statut"><div class="demo" style="background:#0B5FA5;opacity:.30;border-bottom:1px solid var(--trait)"></div><div class="txt"><b>Objectif 2036</b><span>Cible publiquement adoptée. Ce n’est pas un constat, c’est une intention datée.</span><span class="regle">aplat 30 % · bordure pleine · ◎ Objectif</span></div></div>
+<div class="statut"><div class="demo" style="background-image:repeating-linear-gradient(45deg,#0B5FA5 0 6px,#ffffff 6px 13px);opacity:.62;border-bottom:1px dashed #0B5FA5"></div><div class="txt"><b>Scénario</b><span>Hypothèse de travail. <b>N’a été adoptée par personne</b> et ne doit jamais être présentée comme une décision.</span><span class="regle">hachures 45° · bordure tiretée · ◇ Scénario</span></div></div>
+</div>
+<h3>Les pastilles, telles qu’elles apparaissent</h3>
+<p><span class="badge" style="background:#0B5FA5;color:#fff">● Fait</span> &nbsp; <span class="badge" style="background:#D3E2F0;color:#0A3C66">◎ Objectif 2036</span> &nbsp; <span class="badge" style="background:repeating-linear-gradient(45deg,#E4EEF7 0 5px,#fff 5px 10px);color:#0A3C66;box-shadow:inset 0 0 0 1px #9BBBD8">◇ Scénario</span></p>
+<h3>La ligne de source</h3>
+<p>Sous chaque chiffre publié, une ligne en 12 px Ardoise, dans cet ordre exact :</p>
+<div class="spec"><span class="ex mono">Source — Nom de l’organisme · publié le JJ/MM/AAAA · relevé le JJ/MM/AAAA</span><span class="det">Si la source manque, le champ affiche « non renseigné » en Ardoise. Il ne reste jamais vide, et il ne se remplit jamais d’une estimation.</span></div>
+</section>
+<section><h2><span class="num">05</span>Les scores sur 100</h2>
+<p class="chapo">Data Center Readiness Score, Free Zone Potential Score, Port-Digital Synergy Score : trois indicateurs, une seule écriture. Le nombre est toujours écrit — la couleur ne remplace pas le chiffre, elle l’accompagne.</p>
+<div class="grille g4">
+<div class="score"><div class="val" style="background:#B32020">39</div><div><b>Faible</b><div class="mono" style="font-size:12px;color:var(--ardoise)">0 – 39</div></div></div>
+<div class="score"><div class="val" style="background:#B36B00">59</div><div><b>Moyen</b><div class="mono" style="font-size:12px;color:var(--ardoise)">40 – 59</div></div></div>
+<div class="score"><div class="val" style="background:#0F8C4C">79</div><div><b>Bon</b><div class="mono" style="font-size:12px;color:var(--ardoise)">60 – 79</div></div></div>
+<div class="score"><div class="val" style="background:#006233">100</div><div><b>Élevé</b><div class="mono" style="font-size:12px;color:var(--ardoise)">80 – 100</div></div></div>
+</div>
+<p style="margin-top:18px"><b>Et une règle de fond :</b> un score affiché ouvre toujours le détail de son calcul — les critères, leur poids, et la donnée manquante quand il y en a une. Un score dont les critères ne sont pas consultables est un avis déguisé en mesure. Quand un critère manque, le score n’est pas calculé « au mieux » : il affiche <span class="mono">incomplet</span> et dit lequel manque.</p>
+</section>
+<section><h2><span class="num">06</span>La carte</h2>
+<p class="chapo">La carte est l’écran principal du produit ; sa mise en forme fait donc partie de la charte, pas du développement.</p>
+<ul><li><b>Fond neutre et désaturé.</b> Papier <code>#F7FAF8</code>, eau <code>#E8F0F4</code>, frontières <code>#C9D6CF</code> en 1 px. Le fond ne doit jamais concurrencer les couches.</li><li><b>Une couche = une couleur de la palette 04.</b> Traits à 2 px, points à 8 px, aplats à 55 % d’opacité pour laisser lire le fond.</li><li><b>Sélection</b> en Vert 2036, halo Vert pâle de 4 px. Le vert ne sert qu’à ça sur la carte.</li><li><b>Légende obligatoire et toujours visible.</b> Une couche activée sans légende affichée est un bogue, pas un choix de mise en page.</li><li><b>Échelle et source du fond de carte</b> en bas à droite, en 12 px, sur toutes les vues, y compris les captures exportées.</li><li><b>Le mode nuit</b> reprend Vert profond en fond ; les couleurs de couche s’éclaircissent de deux crans, elles ne changent pas de teinte.</li></ul>
+</section>
+<section><h2><span class="num">07</span>Quelques composants</h2>
+<div class="grille g2">
+<div class="carte"><h3 style="margin-top:0">Boutons</h3><p style="margin:0 0 12px"><span style="display:inline-block;background:#006233;color:#fff;border-radius:8px;padding:11px 20px;font-weight:600;font-size:14px">Analyser ce territoire</span>&nbsp;&nbsp;<span style="display:inline-block;background:#fff;color:#006233;border:1px solid #006233;border-radius:8px;padding:10px 19px;font-weight:600;font-size:14px">Comparer</span></p><div class="mono" style="font-size:11px;color:var(--ardoise)">rayon 8 px · hauteur 44 px · libellé 14 px / 600<br>zone tactile minimale 44 × 44 px</div></div>
+<div class="carte"><h3 style="margin-top:0">Fiche territoire</h3><div style="border:1px solid var(--trait);border-radius:8px;overflow:hidden"><div style="background:#04331F;color:#fff;padding:12px 14px;font-weight:600">Wilaya — <span style="opacity:.75;font-weight:400">nom</span></div><div style="padding:12px 14px;font-size:13px"><div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--trait);padding:7px 0"><span style="color:var(--ardoise)">Population</span><span class="mono">non renseigné</span></div><div style="display:flex;justify-content:space-between;padding:7px 0"><span style="color:var(--ardoise)">Puissance disponible</span><span class="mono">non renseigné</span></div></div></div><div class="mono" style="font-size:11px;color:var(--ardoise);margin-top:10px">Un champ sans donnée s’écrit « non renseigné ».<br>Il ne se remplit pas d’une estimation.</div></div>
+</div></section>
+<section><h2><span class="num">08</span>Accessibilité</h2>
+<table><thead><tr><th>Association</th><th>Rapport mesuré</th><th>Niveau WCAG 2.1</th><th>Verdict</th></tr></thead><tbody>
+<tr><td>Encre sur blanc</td><td class="n">17.18:1</td><td class="n">AAA</td><td class="ratio ok">texte courant</td></tr>
+<tr><td>Ardoise sur blanc</td><td class="n">5.63:1</td><td class="n">AA</td><td class="ratio ok">texte courant</td></tr>
+<tr><td>Blanc sur Vert Algérie</td><td class="n">7.51:1</td><td class="n">AAA</td><td class="ratio ok">texte courant</td></tr>
+<tr><td>Blanc sur Vert profond</td><td class="n">14.01:1</td><td class="n">AAA</td><td class="ratio ok">texte courant</td></tr>
+<tr><td>Vert Algérie sur blanc</td><td class="n">7.51:1</td><td class="n">AAA</td><td class="ratio ok">texte courant</td></tr>
+<tr><td>Vert 2036 sur blanc</td><td class="n">4.31:1</td><td class="n">AA gros texte</td><td class="ratio moyen">titres ≥ 24 px seulement</td></tr>
+<tr><td>Blanc sur Vert 2036</td><td class="n">4.31:1</td><td class="n">AA gros texte</td><td class="ratio moyen">titres ≥ 24 px seulement</td></tr>
+<tr><td>Encre sur Vert pâle</td><td class="n">15.14:1</td><td class="n">AAA</td><td class="ratio ok">texte courant</td></tr>
+</tbody></table>
+<p style="margin-top:16px">Le seul couple à surveiller est le <b>Vert 2036 sur blanc</b>. Il est retenu pour les liens et les états actifs, pas pour du texte courant ; en texte de lien, il est systématiquement souligné, de sorte que le lien reste identifiable sans la couleur.</p>
+</section>
+<section><h2><span class="num">09</span>Ce qui est livré</h2>
+<ul><li><code>logo/</code> — 10 fichiers SVG (horizontal, vertical, arabe, signe seul, monochromes, pastille), texte converti en tracés.</li><li><code>logo/png/</code> — les mêmes en PNG à fond transparent, pour les outils qui ne lisent pas le SVG. Le SVG reste la référence.</li><li><code>polices/</code> — IBM Plex Sans, Sans Arabic et Mono, sous licence OFL, à héberger sur le serveur.</li><li><code>charte.html</code> — ce document, à ouvrir dans un navigateur ou à imprimer en PDF.</li><li><code>outils/marque.py</code> — le générateur du logo. Le tracé des trois frondes est écrit une seule fois ; toutes les déclinaisons en découlent.</li><li><code>outils/charte.py</code> — le générateur de ce document. Les contrastes sont calculés, pas saisis.</li></ul>
+</section>
+</div>
+<footer><div class="env">ALGÉRIE 2036 — charte graphique v1.0 · 30 août 2026 · document de travail, à faire évoluer avec la plateforme.</div></footer>
+</body></html>

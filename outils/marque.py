@@ -31,7 +31,7 @@ SORTIE = os.path.join(RACINE, 'logo')
 VERT = '#006233'        # Vert Algerie — couleur primaire
 VERT_VIF = '#0F8C4C'    # Vert 2036 — la fronde centrale, les liens, les boutons
 BLANC = '#FFFFFF'
-ENCRE = '#0B1F17'
+ENCRE = '#0A2019'      # un vert si sombre qu'il lit noir — jamais un noir pur
 
 # --- Le dessin ------------------------------------------------------------
 #

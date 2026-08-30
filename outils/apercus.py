@@ -16,14 +16,15 @@ SORTIE = os.path.join(RACINE, 'apercus')
 # (fichier, selecteur d'ancrage, decalage vertical, hauteur de fenetre)
 VUES = [
 	('01-marque.png', 'header', 0, 980),
-	('02-declinaisons.png', 'section:nth-of-type(1) h3', -40, 900),
+	('02-declinaisons.png', 'section:nth-of-type(1) h3', -40, 940),
 	('03-couleurs.png', 'section:nth-of-type(2)', 0, 1000),
-	('04-couches.png', 'section:nth-of-type(2) h3:nth-of-type(3)', -30, 1000),
-	('05-typographie.png', 'section:nth-of-type(3)', 0, 1000),
-	('06-statut.png', 'section:nth-of-type(4)', 0, 980),
-	('07-scores.png', 'section:nth-of-type(5)', 0, 900),
-	('08-composants.png', 'section:nth-of-type(7)', 0, 860),
-	('09-accessibilite.png', 'section:nth-of-type(8)', 0, 860),
+	('04-valeurs.png', 'section:nth-of-type(2) h3:nth-of-type(3)', -30, 1000),
+	('05-couches.png', 'section:nth-of-type(3)', 0, 1000),
+	('06-couches-suite.png', 'section:nth-of-type(3) .grille', -30, 1000),
+	('07-statut.png', 'section:nth-of-type(5)', 0, 980),
+	('08-scores.png', 'section:nth-of-type(6)', 0, 900),
+	('09-composants.png', 'section:nth-of-type(8)', 0, 940),
+	('10-accessibilite.png', 'section:nth-of-type(9)', 0, 980),
 ]
 
 
@@ -32,7 +33,13 @@ def main():
 	url = 'file://' + os.path.join(RACINE, 'charte.html')
 	faits = []
 	with sync_playwright() as p:
-		nav = p.chromium.launch()
+		# --disable-lcd-text : sans ca, Chromium fait de l'anticrenelage
+		# sous-pixel et pose des franges ORANGE et BLEUES sur chaque lettre.
+		# Sur une charte « vert et blanc exclusivement », la capture
+		# contredirait le document qu'elle est censee prouver — mesure faite :
+		# 45 849 pixels colores hors de la bande verte sur une seule vue.
+		nav = p.chromium.launch(args=['--disable-lcd-text',
+		                              '--force-color-profile=srgb'])
 		page = nav.new_page()
 		for nom, sel, dy, haut in VUES:
 			# La fenetre reste sous 2000 px dans les deux sens.
